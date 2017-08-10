@@ -1,14 +1,10 @@
-import React from 'react'
-import {render} from 'react-dom'
-class Comp extends React.Component {
-    render(){
-        return (
-            <p>Hi {this.props.name}</p>
-        );
-    }
-}
+import React, {Component} from 'react';
+import {render} from 'react-dom';
+import {PRODUCTS} from './ListProductsJSON';
+import FilterableProductTable from './components/FilterableProductTable';
+require('../CSS/app.scss');
 
 render(
-    <Comp name="Lubmir"/>,
+    <FilterableProductTable products={PRODUCTS}/>,
     document.getElementById('container')
 );

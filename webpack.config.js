@@ -1,4 +1,4 @@
-var path = require('path')
+const path = require('path');
 
 module.exports = {
     devtool: 'source-map',
@@ -18,7 +18,11 @@ module.exports = {
                 test: /\.js/,
                 loaders: ['babel-loader'],
                 include: path.join(__dirname, 'src')
+            },
+            {
+                test: /\.scss$/,
+                loader: "webpack-sass"
             }
         ]
     }
-}
+};
